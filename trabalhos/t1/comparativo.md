@@ -16,7 +16,7 @@ Nome: < preencha seu nome aqui >
 | Frequência do(s) processador(es)                          |       2.5GHz          |      1.730 GHz     |
 | Memória total                                             |     301,056 GB        |     8GB            |
 | Tipo(s) de interconexão entre os núcleos/processadores    | Cray Gemini interconnect  |                 |
-| Desempenho Linpack                                        |    	1,167 TFlop/s                   |                 |
+| Desempenho Linpack                                        |    	1,167 TFlop/s                   |     arquivo            |
 
 ### Referências
 - Autor (nome de pessoa ou instituição). Título. URL.
