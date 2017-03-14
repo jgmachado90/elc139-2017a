@@ -7,16 +7,16 @@ Nome: < preencha seu nome aqui >
 
 | Característica                                            | Computador no TOP500  | Meu computador  |
 | --------------------------------------------------------- | --------------------- | --------------- |
-| Nome/Título                                               |                       |                 |
-| Imagem (foto, diagrama, screenshot, etc.)                 | Substitua-me. <img src="http://www.top500.org/static//images/Top500_logo.png" width="48"> | Substitua-me. <img src="http://www.top500.org/static//images/Top500_logo.png" width="48">|
-| Classificação de Flynn                                    |                       |                 |
+| Nome/Título                                               |  Garnet               |     Inspiron15  |
+| Imagem (foto, diagrama, screenshot, etc.)                 |<img src="https://coast.nd.edu/images/Garnet.jpg" width="150"> | <img src="http://i.dell.com/sites/imagecontent/products/PublishingImages/inspiron-15r-5537/images/laptop-inspiron-15r-5537-pdp-1.jpg" width="150">|
+| Classificação de Flynn                                    |      SIMD             |   SIMD          |
 | Memória: compartilhada, distribuída ou ambas?             |                       |                 |
-| Número total de núcleos de processamento                  |                       |                 |
-| Fabricante e modelo do(s) processador(es)                 |                       |                 |
-| Frequência do(s) processador(es)                          |                       |                 |
-| Memória total                                             |                       |                 |
-| Tipo(s) de interconexão entre os núcleos/processadores    |                       |                 |
-| Desempenho Linpack                                        |                       |                 |
+| Número total de núcleos de processamento                  |      150,528          |                 |
+| Fabricante e modelo do(s) processador(es)                 | Cray Inc, Opteron 16C |                 |
+| Frequência do(s) processador(es)                          |       2.5GHz          |                 |
+| Memória total                                             |     301,056 GB        |     8GB            |
+| Tipo(s) de interconexão entre os núcleos/processadores    | Cray Gemini interconnect  |                 |
+| Desempenho Linpack                                        |    	1,167 TFlop/s                   |                 |
 
 ### Referências
 - Autor (nome de pessoa ou instituição). Título. URL.
