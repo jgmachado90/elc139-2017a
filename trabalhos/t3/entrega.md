@@ -52,36 +52,36 @@ Criação (pthread_create) e junção (pthread_join) das threads.
 
 2. Considerando o tempo (em segundos) mostrado na saída do programa, qual foi a aceleração com o uso de threads?
 
-No primeiro programa, com uma única thread, o tempo do programa foi de 
-16,68 segundos.
+	No primeiro programa, com uma única thread, o tempo do programa foi de 
+	16,68 segundos.
 
 No segundo programa, com duas threads, o tempo do programa foi de 8,63 segundos.
 
-Aceleração de 1,93.
+	Aceleração de 1,93.
 
 
 
 3. A aceleração (speedup) se sustenta para outros tamanhos de vetores, números de threads e repetições? Para responder a essa questão, você terá que realizar diversas execuções, variando o tamanho do problema (tamanho dos vetores e número de repetições) e o número de threads (1, 2, 4, 8..., dependendo do número de núcleos). Cada caso deve ser executado várias vezes, para depois calcular-se um tempo de processamento médio para cada caso. Atenção aos fatores que podem interferir na confiabilidade da medição: uso compartilhado do computador, tempos muito pequenos, etc.
 
- 1 thread, para vetor de 1000000 de elementos, com 2000 repetições:
+		1 thread, para vetor de 1000000 de elementos, com 2000 repetições:
 
- 16679692 usec
+		16679692 usec
 
- 2 threads
+		2 threads
 
- 8627080 usec
+		8627080 usec
 
- 4 threads
+		4 threads
  
- 8593274 usec
+		8593274 usec
 
- 8 threads
+		8 threads
 
- 8399543 usec
+		8399543 usec
 
- 16 threads
+		16 threads
 
- 8376153 usec
+		8376153 usec
 
 
 
@@ -90,13 +90,12 @@ Aceleração de 1,93.
 
 
 
-5. Explique as diferenças entre [pthreads_dotprod.c](pthreads_dotprod/pthreads_dotprod.c) e [pthreads_dotprod2.c](pthreads_dotprod/pthreads_dotprod2.c). Com as linhas removidas, o programa está correto? O programa pthreads_dotprod2.c não está correto, pois deixa 
-em aberto uma condição de corrida entre as threads, onde elas podem usar de uma mesma variável ao mesmo tempo. O correto seria a utilização 
-de mutex na região crítica, garantindo exclusão mútua.
+5. Explique as diferenças entre [pthreads_dotprod.c](pthreads_dotprod/pthreads_dotprod.c) e [pthreads_dotprod2.c](pthreads_dotprod/pthreads_dotprod2.c). Com as linhas removidas, o programa está correto? 
+
+		O programa pthreads_dotprod2.c não está correto, pois deixa em aberto uma condição de corrida entre as threads, onde elas podem usar de uma mesma variável ao mesmo tempo. O correto seria a utilização de mutex na região crítica, garantindo exclusão mútua.
     
 
 
-    
 ## Preparação OpenMP
 
 
