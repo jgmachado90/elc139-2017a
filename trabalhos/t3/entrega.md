@@ -16,35 +16,35 @@ João Gonçalves Machado
 
 **Particionamento:**
 
-int wsize = dotdata.wsize;
-int start = offset*wsize;
-int end = start + wsize;
+	int wsize = dotdata.wsize;
+	int start = offset*wsize;
+	int end = start + wsize;
 
 Divide a tarefa entre as threads. Cada uma recebendo uma parte do vetor para calcular em paralelo.
 
 **Comunicação:**
 
-pthread_mutex_lock (&mutexsum);
-dotdata.c += mysum;
-pthread_mutex_unlock (&mutexsum);
+	pthread_mutex_lock (&mutexsum);
+	dotdata.c += mysum;
+	pthread_mutex_unlock (&mutexsum);
 
 Com uma execução multithread, o mutex garante exclusão mutua para que somente uma thread possa modificar o dotdata.c por vez.
 
 **Aglomeração:**
 
-dotdata.c += mysum;
+	dotdata.c += mysum;
 
 dotdata.c recebe as somas das threads, onde cada thread incrementa em sua própria dotdata.c.
 
 **Mapeamento:**
 
-for (i = 0; i < nthreads; i++) {
-      pthread_create(&threads[i], &attr, dotprod_worker, (void *) i);
-   }
-   pthread_attr_destroy(&attr);
-   for (i = 0; i < nthreads; i++) {
-      pthread_join(threads[i], NULL);
-   }
+	for (i = 0; i < nthreads; i++) {
+		pthread_create(&threads[i], &attr, dotprod_worker, (void *) i);
+	}
+	pthread_attr_destroy(&attr);
+	for (i = 0; i < nthreads; i++) {
+		pthread_join(threads[i], NULL);
+	}
 
 Criação (pthread_create) e junção (pthread_join) das threads.
 
