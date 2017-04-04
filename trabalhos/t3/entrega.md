@@ -52,12 +52,12 @@ Criação (pthread_create) e junção (pthread_join) das threads.
 
 2. Considerando o tempo (em segundos) mostrado na saída do programa, qual foi a aceleração com o uso de threads?
 
-	No primeiro programa, com uma única thread, o tempo do programa foi de 
-	16,68 segundos.
+		No primeiro programa, com uma única thread, o tempo do programa foi de 
+		16,68 segundos.
 
 No segundo programa, com duas threads, o tempo do programa foi de 8,63 segundos.
 
-	Aceleração de 1,93.
+		Aceleração de 1,93.
 
 
 
@@ -96,35 +96,37 @@ No segundo programa, com duas threads, o tempo do programa foi de 8,63 segundos.
     
 
 
-## Preparação OpenMP
-
-
-1. Nesta parte você vai trabalhar com um programa muito simples que usa OpenMP: [ompsimple.c](openmp/ompsimple.c).
-
-2. Compile o programa usando a flag `-fopenmp`, que habilita OpenMP:
-
-   ```
-   gcc -fopenmp -o ompsimple ompsimple.c
-   ```
-   
-3. Execute o programa com 8 threads:
-
-   ```
-   OMP_NUM_THREADS=8 ./ompsimple
-   ```
-
 ## Implementação OpenMP
 
 1. Implemente um programa equivalente a [pthreads_dotprod.c](pthreads_dotprod/pthreads_dotprod.c) usando OpenMP. 
+			O programa usado foi um programa que gera a sequencia de fibonacci. As funções para a contagem do tempo
+			de execução eu retirei do meu trabalho de SO do ano passado.
 
 2. Avalie o desempenho do programa em OpenMP, usando os mesmos dados/argumentos do programa com threads POSIX. 
 
+		./omp_fibo 1 10000000
+		Tempo total: 0.124064
 
-## Material de apoio
 
-- [POSIX Threads Programming](http://www.llnl.gov/computing/tutorials/pthreads/)  
-  Tutorial do Lawrence Livermore National Laboratory (LLNL) sobre Pthreads.
+		./omp_fibo 2 10000000
+		Tempo total: 0.139333
 
-- [Tutorial OpenMP](https://computing.llnl.gov/tutorials/openMP/)  
-  Tutorial do Lawrence Livermore National Laboratory (LLNL) sobre OpenMP. 
+
+		./omp_fibo 4 10000000
+		Tempo total: 0.136719
+
+		./omp_fibo 8 10000000
+		Tempo total: 0.144926
+
+		./omp_fibo 16 10000000
+		Tempo total: 0.145355
+
+
+
+##Referencias
+
+https://www.cs.usask.ca/~spiteri/CMPT851/notes/demos/omp_fibo.c
+
+Trabalho de SO - João Machado - 2 sem/2016.
+
 
