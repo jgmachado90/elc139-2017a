@@ -1,0 +1,151 @@
+#Trabalho 9 Programação Paralela
+
+João Gonçalves Machado
+
+#Máquina dos testes
+
+Arquitetura:           x86_64
+Modo(s) operacional da CPU:32-bit, 64-bit
+Ordem dos bytes:       Little Endian
+CPU(s):                4
+Lista de CPU(s) on-line:0-3
+Thread(s) per núcleo: 1
+Núcleo(s) por soquete:4
+Soquete(s):            1
+Nó(s) de NUMA:        1
+ID de fornecedor:      GenuineIntel
+Família da CPU:       6
+Modelo:                158
+Nome do modelo:        Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz
+Step:                  9
+CPU MHz:               1020.263
+CPU MHz máx.:         3500,0000
+CPU MHz mín.:         800,0000
+BogoMIPS:              6000.00
+Virtualização:       VT-x
+cache de L1d:          32K
+cache de L1i:          32K
+cache de L2:           256K
+cache de L3:           6144K
+CPU(s) de nó0 NUMA:   0-3
+
+#Entradas:
+
+Após executar, deverão ser inseridos duas entradas:
+
+A primeira entrada é o numero de digitos após a virgula
+Exemplo: se for inserido 4 vai o numero que sai terá 4 casas após a vírgula 0,xxxx
+
+A segunda entrada é o número de soma das divisões com denominador 1 até n:
+Exemplo: se for inserido 4 ->  1/1 + 1/2 + 1/3 + 1/4
+
+#Testes
+
+#######################
+Entrada 10 100
+
+SEQUENCIAL:
+
+time: 0.000087 
+time: 0.000100 
+time: 0.000097 
+time: 0.000097 
+time: 0.000099 
+
+
+OMP:
+time omp: 0.000197 
+time omp: 0.014090 
+time omp: 0.019164 
+time omp: 0.006866 
+time omp: 0.014676 
+
+speedup = 	0.01002
+
+######################
+
+Entrada 100 1.000
+
+SEQUENCIAL:
+
+time: 0.002913 
+time: 0.003073 
+time: 0.002345 
+time: 0.003777 
+time: 0.002915 
+
+OMP:
+time omp: 0.007765 
+time omp: 0.010486 
+time omp: 0.012553 
+time omp: 0.007587 
+time omp: 0.007876 
+
+speedup = 0.3277
+
+#####################
+Entrada 1.000 10.000
+
+SEQUENCIAL:
+time: 0.155668 
+time: 0.156712 
+time: 0.157479 
+time: 0.157821 
+time: 0.157736 
+
+
+
+OMP:
+time omp: 0.066938 
+time omp: 0.075584 
+time omp: 0.067489 
+time omp: 0.075576 
+time omp: 0.079434 
+
+speedup = 2,0595
+
+#####################
+
+Entrada 1.000 1.000.000
+
+SEQUENCIAL:
+time: 15.526752 
+time: 15.994612 
+time: 15.487875 
+time: 15.748693 
+time: 15.648240 
+
+OMP:
+time omp: 5.878080 
+time omp: 6.247534 
+time omp: 6.401734 
+time omp: 5.894090 
+time omp: 5.797151 
+
+speedup = 2,6414
+
+#########################
+Entrada 1.000 10.000.000
+
+SEQUENCIAL:
+
+time: 156.375282 
+time: 162.286594 
+time: 158.197654  
+
+OMP:
+time omp: 55.824593 
+time omp: 52.151837 
+time omp: 50.151837 
+
+speedup = 3,0334
+#########################
+
+
+
+
+
+
+
+
+
